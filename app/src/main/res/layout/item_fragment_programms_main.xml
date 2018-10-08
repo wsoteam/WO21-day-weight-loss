@@ -10,7 +10,7 @@
     android:layout_marginRight="10dp"
     android:layout_marginTop="8dp"
     app:cardElevation="7dp"
-    app:cardCornerRadius="5dp">
+    app:cardCornerRadius="1dp">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -39,20 +39,28 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvCountOfProgrammInside"
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|right"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/mattRed">
+
+        <TextView
+            android:id="@+id/tvCountOfProgrammInside"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
             android:drawableLeft="@drawable/ic_count_inside"
             android:drawablePadding="5dp"
-            android:drawableTint="@color/whiteColor"
+            android:layout_margin="8dp"
+            android:drawableTint="@color/white"
             android:text="ItemOfHomeList"
-            android:textColor="@color/whiteColor"
+            android:textColor="@color/white"
             android:textSize="13sp"
             android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
 
 
     </FrameLayout>

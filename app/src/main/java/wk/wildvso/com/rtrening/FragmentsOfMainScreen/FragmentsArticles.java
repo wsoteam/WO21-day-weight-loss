@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +17,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import wk.wildvso.com.rtrening.ActivitiesArticles.ActivityDetailAcrticles;
-import wk.wildvso.com.rtrening.ActivitiesPartOfBody.ActivityListOfExGroups;
 import wk.wildvso.com.rtrening.ObjectHolder;
 import wk.wildvso.com.rtrening.POJOs.AllWholeArticles;
-import wk.wildvso.com.rtrening.POJOs.PartOfBody;
 import wk.wildvso.com.rtrening.POJOs.WholeArticle;
 import wk.wildvso.com.rtrening.R;
 
@@ -45,7 +43,7 @@ public class FragmentsArticles extends Fragment {
         //allWholeArticles = (AllWholeArticles) getArguments().getSerializable(TAG_OF_FRAGMENT);
         allWholeArticles = ObjectHolder.getGlobalObject().getWholeArticles();
         listOfArticlesRecyclerView = view.findViewById(R.id.rvListOfArticles);
-        listOfArticlesRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        listOfArticlesRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         listOfArticlesRecyclerView.setAdapter(new ArticleAdapter((ArrayList<WholeArticle>) allWholeArticles.getWholeArticleList()));
 
         return view;
@@ -55,7 +53,7 @@ public class FragmentsArticles extends Fragment {
         private TextView titleOfArticle;
 
         public ArticleVH(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-            super(layoutInflater.inflate(R.layout.item_fragment_articles_list, viewGroup, false));
+            super(layoutInflater.inflate(R.layout.item_fragment_articles_main, viewGroup, false));
             titleOfArticle = itemView.findViewById(R.id.tvTitleOfArticleItem);
             titleOfArticle.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "asProgramMainScreen.ttf"));
             itemView.setOnClickListener(this);

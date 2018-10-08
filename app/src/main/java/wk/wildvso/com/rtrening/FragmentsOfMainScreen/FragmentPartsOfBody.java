@@ -58,7 +58,7 @@ public class FragmentPartsOfBody extends Fragment {
         private ImageView ivBackground;
 
         public ExViewHolder(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-            super(layoutInflater.inflate(R.layout.item_fragment_part_of_body_list_main_screen, viewGroup, false));
+            super(layoutInflater.inflate(R.layout.item_fragment_part_body_main, viewGroup, false));
             tvNameOfPartOfBody = itemView.findViewById(R.id.tvNamePartOfBodyHomeList);
             tvNameOfPartOfBody.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "asProgramMainScreen.ttf"));
             ivBackground = itemView.findViewById(R.id.ivBackgroundItemListOfPartOfBodyMainScreen);

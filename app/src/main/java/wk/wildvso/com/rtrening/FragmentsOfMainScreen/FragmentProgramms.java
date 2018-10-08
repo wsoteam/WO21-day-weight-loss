@@ -56,7 +56,7 @@ public class FragmentProgramms extends Fragment {
         ImageView imageView;
 
         public ProgrammViewHolder(LayoutInflater layoutInflater, ViewGroup parent) {
-            super(layoutInflater.inflate(R.layout.item_fragment_programms_main_screen, parent, false));
+            super(layoutInflater.inflate(R.layout.item_fragment_programms_main, parent, false));
 
             tvTitleOfProgramm = itemView.findViewById(R.id.tvNameHomeList);
             tvCountOfProgrammInside = itemView.findViewById(R.id.tvCountOfProgrammInside);

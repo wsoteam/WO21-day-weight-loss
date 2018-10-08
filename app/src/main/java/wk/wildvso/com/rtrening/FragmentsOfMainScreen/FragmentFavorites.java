@@ -15,16 +15,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import wk.wildvso.com.rtrening.ActivitiesProgramm.ActivityListOfTraining;
 import wk.wildvso.com.rtrening.ActivitiesProgramm.ActivityWithTiles;
 import wk.wildvso.com.rtrening.ObjectHolder;
-import wk.wildvso.com.rtrening.POJOs.GlobalObject;
 import wk.wildvso.com.rtrening.POJOs.ObjectLocalDatabase;
 import wk.wildvso.com.rtrening.POJOs.Training;
 import wk.wildvso.com.rtrening.R;
@@ -40,7 +37,7 @@ public class FragmentFavorites extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_favorites, container, false);
+        final View view = inflater.inflate(R.layout.fragment_favorites_main, container, false);
         imageIfEmpty = view.findViewById(R.id.ivBackGroundFavorites);
         textIfEmpty = view.findViewById(R.id.tvNotFoundEntity);
         recyclerView = view.findViewById(R.id.rvFavorites);

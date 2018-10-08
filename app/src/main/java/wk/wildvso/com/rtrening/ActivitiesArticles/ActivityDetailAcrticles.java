@@ -18,9 +18,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import wk.wildvso.com.rtrening.FragmentsOfMainScreen.FragmentsArticles;
 import wk.wildvso.com.rtrening.ObjectHolder;
 import wk.wildvso.com.rtrening.POJOs.Article;
 import wk.wildvso.com.rtrening.POJOs.WholeArticle;
@@ -48,7 +46,7 @@ public class ActivityDetailAcrticles extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_aticles);
+        setContentView(R.layout.activity_detail_articles);
 
         banner = findViewById(R.id.bannerFromArticle);
         mInterstitialAd = new InterstitialAd(this);
