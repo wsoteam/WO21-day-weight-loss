@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="wk.wildvso.com.rtrening">
+    package="wk.wildvso.com.twentyonetrening">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -17,7 +17,7 @@
         <meta-data android:name="DATABASE" android:value="work_out_database_30_loss.db" />
         <meta-data android:name="VERSION" android:value="1" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="wk.wildvso.com.rtrening" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="wk.wildvso.com.twentyonetrening" />
 
         <activity android:name=".Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

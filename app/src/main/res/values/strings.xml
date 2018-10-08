@@ -1,15 +1,15 @@
 <resources>
 
-    <string name="admob_id" translatable="false">ca-app-pub-3050564412171997~7145678576</string>
+    <string name="admob_id" translatable="false">ca-app-pub-3050564412171997~7085838940</string>
 
-    <string name="ban1_id" translatable="false">ca-app-pub-3050564412171997/7067046700</string>
-    <string name="ban2_id" translatable="false">ca-app-pub-3050564412171997/8267188554</string>
-    <string name="ban3_id" translatable="false">ca-app-pub-3050564412171997/1461450518</string>
-    <string name="inter" translatable="false">ca-app-pub-3050564412171997/9339940534</string>
+    <string name="ban1_id" translatable="false">ca-app-pub-3050564412171997/9700679406</string>
+    <string name="ban2_id" translatable="false">ca-app-pub-3050564412171997/4065209342</string>
+    <string name="ban3_id" translatable="false">ca-app-pub-3050564412171997/7632633858</string>
+    <string name="inter" translatable="false">ca-app-pub-3050564412171997/2380307176</string>
 
 
 
-    <string name="yandex_id" translatable="false">6a6b1d3c-0ce1-42e4-92d7-04885b2e4387</string>
+    <string name="yandex_id" translatable="false">b6caf877-c8c4-45ab-a352-8d92ccc8029c</string>
 
     <string name="body_gdpr">Продолжая использовать данное приложение Вы принимаете нашу политику конфиденциальности</string>
     <string name="title_gdpr">Здравствуйте!</string>
