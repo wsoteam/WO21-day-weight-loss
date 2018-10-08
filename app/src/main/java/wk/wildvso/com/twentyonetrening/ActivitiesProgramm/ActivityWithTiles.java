@@ -78,15 +78,17 @@ public class ActivityWithTiles extends AppCompatActivity {
             GroupTilesAdapter groupTilesAdapter = new GroupTilesAdapter((ArrayList<ArrayOfTiles>) training.getTilesList());
             groupTilesAdapter.setHasStableIds(true);
             recyclerView.setAdapter(groupTilesAdapter);
+
+            banner = findViewById(R.id.bannerFromActivityWithTiles);
         }
 
-        banner = findViewById(R.id.bannerFromActivityWithTiles);
+
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId(this.getResources().getString(R.string.inter));
         //mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         AdRequest adRequest = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequest);
-        banner.loadAd(adRequest);
+
 
         titleCollapsing = findViewById(R.id.tvCollapsingTitle);
         textCollapsing = findViewById(R.id.tvCollapsingText);
