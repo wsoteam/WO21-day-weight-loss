@@ -68,7 +68,7 @@ public class ActivityWithTiles extends AppCompatActivity {
                 .get(numberOfSelectedProgramm)
                 .getTrainingList()
                 .get(numberOfSelectedItemOfList);
-
+        AdRequest adRequest = new AdRequest.Builder().build();
         if (training.getTilesList().size() == 1) {
             setContentView(R.layout.activity_with_tiles_if_list_empty);
         } else {
@@ -80,13 +80,14 @@ public class ActivityWithTiles extends AppCompatActivity {
             recyclerView.setAdapter(groupTilesAdapter);
 
             banner = findViewById(R.id.bannerFromActivityWithTiles);
+            banner.loadAd(adRequest);
         }
 
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId(this.getResources().getString(R.string.inter));
         //mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        AdRequest adRequest = new AdRequest.Builder().build();
+
         mInterstitialAd.loadAd(adRequest);
 
 
