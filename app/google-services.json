@@ -8,71 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:584294646007:android:c1cdaf67f34eaedc",
+        "mobilesdk_app_id": "1:584294646007:android:8a47f0fead99897d",
         "android_client_info": {
-          "package_name": "wk.wildvso.com.rtrening"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "584294646007-nlteiff2aabpru3d2iir3dtovrh5ul04.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAaUBMwYkE6AwRNFKk0G_BAJ6G3kU23j1Q"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:584294646007:android:0d00780297ac08e7",
-        "android_client_info": {
-          "package_name": "wk.wildvso.com.twentyonetrening"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "584294646007-nlteiff2aabpru3d2iir3dtovrh5ul04.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAaUBMwYkE6AwRNFKk0G_BAJ6G3kU23j1Q"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:584294646007:android:c3e838e930e42eb6",
-        "android_client_info": {
-          "package_name": "wk.wsoteam.com.ex"
+          "package_name": "onepic.bkcom.com.twentyonetrening"
         }
       },
       "oauth_client": [
