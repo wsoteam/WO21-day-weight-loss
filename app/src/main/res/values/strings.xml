@@ -17,6 +17,11 @@
     <string name="yes_gdpr">Продолжить использование приложения</string>
     <string name="url_gdpr" translatable="false">https://www.freeprivacypolicy.com/privacy/view/272200879b5cf29dd1b4fcd0f0299409</string>
 
+    <string name="navigation_settings">Настройки</string>
+    <string name="settings">Настройки</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="share">Поделиться с друзьями</string>
+    <string name="accompanying_text">Я использую это приложение для тренировок и оно работает! Попробуй и ты!</string>
 
     <string name="app_name">Ex</string>
     <string name="home">Домой</string>
