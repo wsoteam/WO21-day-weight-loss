@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
 
@@ -33,6 +35,16 @@ public class ActivityListOfTraining extends AppCompatActivity {
     private Programm programm;
     private int selectedNumber = 0;
     private TrainingAdapter trainingAdapter;
+    private InterstitialAd mInterstitialAd;
+
+    @Override
+    public void onBackPressed() {
+
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+        super.onBackPressed();
+    }
 
     @Override
     protected void onResume() {
@@ -46,6 +58,12 @@ public class ActivityListOfTraining extends AppCompatActivity {
         setContentView(R.layout.activity_training_list);
         selectedNumber = getIntent().getIntExtra(TAG, 0);
         recyclerView = findViewById(R.id.rvTrainingList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(this.getResources().getString(R.string.inter));
+        //mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+
+        mInterstitialAd.loadAd(adRequest);
         fillRecycler();
 
     }
@@ -89,7 +107,7 @@ public class ActivityListOfTraining extends AppCompatActivity {
             imageIsSave.setVisibility(View.GONE);
             tvTitleOfProgramm.setText(training.getTitle());
             Glide.with(ActivityListOfTraining.this).load(training.getUrl_of_image()).into(backgroundImage);
-            if(ObjectLocalDatabase.isAddedInBase(selectedNumber, getAdapterPosition())){
+            if (ObjectLocalDatabase.isAddedInBase(selectedNumber, getAdapterPosition())) {
                 imageIsSave.setVisibility(View.VISIBLE);
             }
         }

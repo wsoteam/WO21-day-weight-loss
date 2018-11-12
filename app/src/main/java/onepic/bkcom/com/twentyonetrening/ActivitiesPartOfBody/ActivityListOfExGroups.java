@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
 
@@ -29,6 +31,16 @@ public class ActivityListOfExGroups extends AppCompatActivity {
     private RecyclerView recyclerView;
     public static final String TAG = "ActivityListOfExGroups";
     private int selectedNumber = 0;
+    private InterstitialAd mInterstitialAd;
+
+    @Override
+    public void onBackPressed() {
+
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+        super.onBackPressed();
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +54,13 @@ public class ActivityListOfExGroups extends AppCompatActivity {
         recyclerView = findViewById(R.id.rvListOfExGroups);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new ListOfGroupsAdapter((ArrayList<ExGroups>) partOfBody.getExGroupsList()));
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(this.getResources().getString(R.string.inter));
+        //mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+
+        mInterstitialAd.loadAd(adRequest);
 
     }
 
